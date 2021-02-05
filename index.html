@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Technical documentation page.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <script src = "https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <style>
+      body{
+        display:flex;
+        flex-direction: row;
+      }
+      h3{
+        font-size: 30px;
+        padding-top:32px;
+        color:#555;
+      }
+      #navbar{
+        position:fixed;
+        width:20%;
+        height:100%;
+        margin-left:30px;
+        overflow:hidden;
+        background:#55555529;
+      }
+      #main-doc{
+        width:70%;
+        margin-left:23%;
+        padding-top:32px;
+        background:#5555551f;
+        padding-left:10px;
+      }
+      #navbar>header>h1{
+        font-size:40px;
+        color:#555;
+        padding-left:10px;
+      }
+      #navbar>ul{
+        margin-left:0px;
+        display:block;
+        margin-block-start: 0px;
+        padding-inline-start: 0px;
+      }
+      #navbar>ul>li{
+        list-style-type: none;
+        font-size:27px;
+        padding-left:10px;
+        border-top:1px solid white;
+        
+      }
+      #navbar>ul>li:nth-child(6){
+        border-bottom:1px solid white;
+      }
+      #navbar>ul>li>a:hover{
+       background-color:#4caf50;
+       color:white;
+        
+      }
+      #navbar>ul>li>a{
+        display:block;
+        width:100%;
+        height:100%;
+        text-decoration:none;
+        
+      }
+      @media screen and (max-width: 1158px){
+        body{
+         
+          display:flex;
+          flex-direction:column;
+        }
+        #navbar{
+         
+          height:auto;
+          width:100%;
+          position:relative;
+          margin-left:0px;
+        }
+        #main-doc{
+        width:100%;
+        margin-left:0px;
+        padding-left:5px;
+        }
+        p{
+          font-size:14px;
+        }
+        #navbar>header>h1{
+        margin-block-start:0px;
+        margin-top:20px;
+      }
+      
+      }
+    </style>
+    <nav id = "navbar">
+      <header>
+        <h1>Introduction to Node Js</h1>
+      </header>
+      <ul>
+        <li><a href = "#NodeJs_HOme" class = "nav-link">NodeJs Home</a></li>
+        <li><a href = "#NodeJs_modules" class = "nav-link">NodeJs modules</a></li>
+        <li><a href = "#NodeJs_HTTP" class = "nav-link">NodeJs HTTP</a></li>
+        <li><a href = "#NodeJs_FS" class = "nav-link">NodeJs FS</a></li>
+        <li><a href = "#NodeJs_URL" class = "nav-link">NodeJs URL</a></li>
+        <li><a href = "#NodeJs_Email" class = "nav-link">NodeJs Email</a></li>
+      </ul>
+      
+    </nav>
+    <main id = "main-doc">
+      <section class = "main-section" id= "NodeJs_HOme">
+        <header>
+          <h3>NodeJs Home</h3>
+        </header>
+        <p>Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that runs on the Chrome V8 engine and executes JavaScript code outside a web browser. Node.js lets developers use JavaScript to write command line tools and for server-side scripting—running scripts server-side to produce dynamic web page content before the page is sent to the user's web browser. Consequently, Node.js represents a "JavaScript everywhere" paradigm,[6] unifying web-application development around a single programming language,</p>
+        <h4>Learning by example</h4>
+
+        <p>Our "Show Node.js" tool makes it easy to learn Node.js, it shows both the code and the result.</p>
+        <h4>Example</h4>
+        <code>
+          var http = require('http');<br>
+
+http.createServer(function (req, res) {<br>
+  res.writeHead(200, {'Content-Type': 'text/plain'});<br>
+  res.end('Hello World!');<br>
+}).listen(8080);<br>
+        </code>
+        <h4>In this section you learned</h4>
+        <ul>
+          <li>NodeJs http system</li>
+          <li>Using the node Js http system</li>
+        </ul>
+      </section>
+      <section class = "main-section" id = "NodeJs_modules">
+        <header>
+          <h3>NodeJs modules</h3>
+        </header>
+        <p>hough .js is the standard filename extension for JavaScript code, the name "Node.js" doesn't refer to a particular file in this context and is merely the name of the product. Node.js has an event-driven architecture capable of asynchronous I/O. These design choices aim to optimize throughput and scalability in web applications with many input/output operations, as well as for real-time Web applications (e.g., real-time communication programs and browser games).</p>
+        <h4>Built-in Modules</h4>
+        <p>Node.js has a set of built-in modules which you can use without any further installation.
+
+          Look at our Built-in Modules Reference for a complete list of modules.</p>
+
+          <code>
+            var http = require('http');<br>
+            http.createServer(function (req, res) {<br>
+              res.writeHead(200, {'Content-Type': 'text/html'});<br>
+              res.end('Hello World!');<br>
+            }).listen(8080);<br>
+          </code>
+        <h4>You learned the following</h4>
+        <ul>
+          <li> Modules of Nodejs</li>
+          <li>How to use modules</li>
+        </ul>
+      </section>
+     
+      <section class = "main-section" id = "NodeJs_HTTP">
+        <header>
+          <h3>NodeJs HTTP</h3>
+
+          </header>
+        <p>The Node.js distributed development project was previously governed by the Node.js Foundation,[8] and has now merged with the JS Foundation to form the OpenJS Foundation, which is facilitated by the Linux Foundation's Collaborative Projects program.[9]
+
+          Corporate users of Node.js software include GoDaddy,[10] Groupon,[11] IBM,[12] LinkedIn,[13][14] Microsoft,[15][16] Netflix,[17] PayPal,[18][19] Rakuten, SAP,[20] Voxer,[21] Walmart,[22] Yahoo!,[23] and Amazon Web Services.[24]</p>
+          <h4>Add an HTTP Header</h4>
+        <p>If the response from the HTTP server is supposed to be displayed as HTML, you should include an HTTP header with the correct content type:</p>
+        <code>
+          var http = require('http');<br>
+http.createServer(function (req, res) {<br>
+  res.writeHead(200, {'Content-Type': 'text/html'});<br>
+  res.write('Hello World!');<br>
+  res.end();<br>
+}).listen(8080);<br>
+        </code>
+        <h4>In this section you learned</h4>
+        <ul>
+          <li>The http module</li>
+          <li>the http header</li>
+        </ul>
+      </section>
+      
+      <section class = "main-section" id = "NodeJs_FS">
+        <header>
+          <h3>NodeJs FS</h3>
+        </header>
+        <p>Node.js was written initially by Ryan Dahl in 2009,[25] about thirteen years after the introduction of the first server-side JavaScript environment, Netscape's LiveWire Pro Web.[26] The initial release supported only Linux and Mac OS X. Its development and maintenance was led by Dahl and later sponsored by Joyent.[27]
+
+          Dahl criticized the limited possibilities of the most popular web server in 2009, Apache HTTP Server, to handle a lot of concurrent</p>
+          <h4>Node.js as a File Server</h4>
+        <p>The Node.js file system module allows you to work with the file system on your computer.
+
+          To include the File System module, use the require() method:</p>
+        <code>
+          var http = require('http');<br>
+var fs = require('fs');<br>
+http.createServer(function (req, res) {<br>
+  fs.readFile('demofile1.html', function(err, data) {<br>
+    res.writeHead(200, {'Content-Type': 'text/html'});<br>
+    res.write(data);<br>
+    return res.end();<br>
+  });<br>
+}).listen(8080);<br>
+        </code>
+      
+      </section>
+      <section class = "main-section" id = "NodeJs_URL">
+        <header>
+          <h3>NodeJs URL</h3>
+        </header>
+        <p>In June 2011, Microsoft and Joyent implemented a native Windows version of Node.js.[34] The first Node.js build supporting Windows was released in July 2011.
+
+          In January 2012, Dahl stepped aside, promoting coworker and npm creator Isaac Schlueter to manage the project.[35] In January 2014, Schlueter announced that Timothy J. Fontaine would lead the project.[36]</p>
+          <h4>This is email</h4>
+        <p>In January 2012, Dahl stepped aside, promoting coworker and npm creator Isaac Schlueter to manage the project.</p>
+        <code>var nodemailer = require('nodemailer');<br>
+
+          var transporter = nodemailer.createTransport({<br>
+            service: 'gmail',<br>
+            auth: {<br>
+              user: 'youremail@gmail.com',<br>
+              pass: 'yourpassword'<br>
+            }br
+          });<br>
+          </code>
+      </section>
+      <section class = "main-section" id = "NodeJs_Email">
+        <header>
+          <h3>NodeJs Email</h3>
+        </header>
+        <p>Dahl demonstrated the project at the inaugural European JSConf on 8 November 2009.[29][30][31] Node.js combined Google's V8 JavaScript engine, an event loop, and a low-level I/O API.[32]
+
+          In January 2010, a package manager was introduced for the Node.js environment called npm.[33] The package manager makes it easier for programmers to publish and share source code of Node.js packages and is </p>
+          <h4>The Built-in email Module</h4>
+        <p>The URL module splits up a web address into readable parts.
+
+          To include the URL module, use the require() method:</p>
+        <code>var url = require('url');<br>
+          var adr = 'http://localhost:8080/default.htm?year=2017&month=february';<br>
+          var q = url.parse(adr, true);<br>
+          
+          console.log(q.host); //returns 'localhost:8080'<br>
+          console.log(q.pathname); //returns '/default.htm'<br>
+          console.log(q.search); //returns '?year=2017&month=february'<br>
+          </code>
+      </section>
+      
+      
+     
+    </main>
+  </body>
+</html>
